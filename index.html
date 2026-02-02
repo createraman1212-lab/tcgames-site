@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TC Games</title>
+  <meta name="description" content="Enter a World of Adventure in TC Games. Register now and join our official channel for updates, predictions and more." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#2c2c2c;
+      --muted:#6a6a6a;
+      --card:#f6f6f6;
+      --btn:#111111;
+      --btnText:#ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    /* TOP BAR */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 16px;
+      position:relative;
+    }
+    .hamburger{
+      position:absolute;
+      left:16px;
+      top:50%;
+      transform:translateY(-50%);
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      user-select:none;
+    }
+    .hamburger:hover{
+      background:#f2f2f2;
+    }
+    .hamburger span{
+      font-size:24px;
+      line-height:1;
+      color:#333;
+    }
+
+    .logo{
+      width:64px;
+      height:64px;
+      object-fit:contain;
+      display:block;
+    }
+
+    /* HERO */
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      padding: 0 16px 40px;
+    }
+
+    .banner-wrap{
+      margin-top:10px;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .banner{
+      width:100%;
+      display:block;
+      max-height:360px;
+      object-fit:cover;
+    }
+
+    h1{
+      margin:28px 0 10px;
+      text-align:center;
+      font-size:52px;
+      font-weight:500;
+      letter-spacing:.5px;
+      color:#3b3b3b;
+    }
+
+    .subtext{
+      text-align:center;
+      max-width:740px;
+      margin:0 auto;
+      font-family: "Georgia", serif;
+      font-size:22px;
+      font-weight:700;
+      color:#2f2f2f;
+      line-height:1.4;
+    }
+
+    .cta{
+      margin:22px auto 0;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      align-items:center;
+    }
+    .btn{
+      width:260px;
+      padding:15px 18px;
+      text-align:center;
+      border-radius:999px;
+      background:var(--btn);
+      color:var(--btnText);
+      text-decoration:none;
+      font-size:22px;
+      font-weight:500;
+      box-shadow: 0 12px 30px rgba(0,0,0,.15);
+      transition: transform .12s ease;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+    }
+
+    .section-title{
+      margin:38px 0 18px;
+      text-align:center;
+      font-size:28px;
+      font-weight:500;
+      color:#3b3b3b;
+    }
+
+    /* CONTENT SECTIONS */
+    .card{
+      background:var(--card);
+      padding:22px;
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      margin:16px 0;
+    }
+
+    .card h2{
+      margin:0 0 14px;
+      font-size:26px;
+      font-weight:600;
+      color:#2f2f2f;
+      text-align:left;
+    }
+
+    .card p{
+      margin:0;
+      font-size:18px;
+      line-height:1.65;
+      color:#333;
+    }
+
+    .list{
+      margin:10px 0 0;
+      padding-left:20px;
+      font-size:18px;
+      color:#333;
+      line-height:1.7;
+    }
+
+    .muted{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .showmore{
+      margin-top:14px;
+      display:inline-block;
+      background:#111;
+      color:#fff;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:16px;
+      font-weight:500;
+      cursor:pointer;
+      border:none;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+
+    .image-card{
+      overflow:hidden;
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .image-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      max-height:280px;
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:30px;
+      padding:22px 12px;
+      text-align:center;
+      color:#666;
+      font-size:15px;
+    }
+
+    /* Floating chat icon (like screenshot) */
+    .chat-fab{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      background:#111;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      box-shadow: 0 14px 35px rgba(0,0,0,.22);
+      cursor:pointer;
+      user-select:none;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      h1{ font-size:38px; }
+      .subtext{ font-size:18px; padding:0 8px; }
+      .btn{ width:92%; max-width:320px; font-size:20px; }
+      .grid2{ grid-template-columns: 1fr; }
+      .banner{ max-height:280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="hamburger" title="Menu">
+      <span>≡</span>
+    </div>
+    <img class="logo" src="assets/logo.png" alt="TC Games Logo">
+  </div>
+
+  <div class="container">
+
+    <div class="banner-wrap">
+      <img class="banner" src="assets/banner.jpg" alt="Welcome to TC Games banner">
+    </div>
+
+    <h1>Enter a World of Adventure in<br/>TC Games</h1>
+
+    <p class="subtext">
+      Playing TC Games is easy and intuitive. Simply<br/>
+      download the app, create an account, and start
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="https://www.bg678vip8.com/#/pages/login/register?invitationCode=2801498961" target="_blank" rel="noopener">Register Here</a>
+      <a class="btn" href="https://t.me/+0zyfkKkWTXA4ODUx" target="_blank" rel="noopener">Channel Link</a>
+    </div>
+
+    <div class="section-title">Snapshots of Virtual Worlds</div>
+
+    <div class="grid2">
+      <div class="image-card">
+        <img src="assets/compete.jpg" alt="Compete with Friends">
+      </div>
+      <div class="card">
+        <h2>Compete with Friends</h2>
+        <p class="muted">
+          Fun games, quick rounds and exciting results — play daily and stay active.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>How to Play TC Games</h2>
+      <p>
+        Everyone can earn in TC Lottery but in order to get your dream profit, you have to do the
+        necessary precautions to avoid losing along the way.
+      </p>
+      <ul class="list">
+        <li>Increase your capital for higher earnings and preparation.</li>
+        <li>Follow Master predictions.</li>
+      </ul>
+
+      <div id="more1" style="display:none; margin-top:12px;">
+        <ul class="list">
+          <li>Always use Triple Investment Method.</li>
+          <li>Advance calculations will go ahead of your game.</li>
+          <li>Enjoy the system and stay disciplined.</li>
+        </ul>
+      </div>
+
+      <button class="showmore" onclick="toggleMore('more1', this)">Show More</button>
+    </div>
+
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        Let’s talk about the new TC Lottery App Register and Get Rs. 120 Bonus.
+        Indian app TC Lottery is currently gaining a lot of popularity.
+        By taking part in more colour prediction games in this game, you can win money.
+        A reliable website for colour forecasting is TC Lottery.
+        Therefore, you can download the TC Lottery app if you wish to make.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>TC Game Updates & Keywords</h2>
+      <p>
+        If you are searching for TC Game register, TC Lottery login, TC Game official link,
+        colour prediction tips, and daily prediction updates, then stay connected with our
+        TC Games platform. Always use the official register link, follow our channel for
+        trusted updates, and play responsibly for a better experience.
+      </p>
+      <p style="margin-top:10px;" class="muted">
+        Tip: New users should complete profile setup after registration and follow our latest rules update before playing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Rule You Need To Follow</h2>
+      <p><strong>‼️‼️‼️ TC RULES UPDATE ‼️‼️‼️</strong></p>
+      <p class="muted" style="margin-top:8px;">
+        All members must strictly abide by the rules and regulations of our platform.
+        Take the time to read the updated rules and understand each of them.
+      </p>
+
+      <ul class="list">
+        <li>⚠️🚫 It is forbidden to use the same mobile phone to register multiple accounts in order to defraud bonuses (using the same IP account is prohibited).</li>
+        <li>⚠️🚫 It is also prohibited to use multiple phones to register multiple accounts.</li>
+        <li>🔔 If you need to register a new account under special circumstances, please contact the support team.</li>
+      </ul>
+
+      <div style="margin-top:14px;">
+        <p><strong>Hours</strong></p>
+        <p class="muted">Mon 10:00 am – 10:00 pm</p>
+        <p class="muted">Tue 10:00 am – 10:00 pm</p>
+        <p class="muted">Wed 10:00 am – 05:00 pm</p>
+        <p class="muted">Thu 10:00 am – 10:00 pm</p>
+        <p class="muted">Fri 10:00 am – 10:00 pm</p>
+        <p class="muted">Sat 10:00 am – 10:00 pm</p>
+        <p class="muted">Sun 10:00 am – 10:00 pm</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Experience the latest Games</h2>
+      <p>
+        TC Games is your ultimate gaming destination! Get your hands on the latest and greatest games,
+        including exclusive titles and early access releases. With our constantly updated library, you'll never
+        run out of games to play!
+      </p>
+
+      <div id="more2" style="display:none; margin-top:12px;">
+        <ul class="list">
+          <li>Join our Gaming Community</li>
+          <li>Find your Perfect Gaming Setup</li>
+          <li>Stay up-to-date with the Latest News</li>
+          <li>Get the Best Deals</li>
+          <li>Become a Pro Gamer</li>
+        </ul>
+      </div>
+
+      <button class="showmore" onclick="toggleMore('more2', this)">Show More</button>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p class="muted">
+        Here’s how you can reach our customer service:
+      </p>
+      <ol class="list">
+        <li>If you have questions about account creation, depositing and withdrawing winnings, data security, bonuses, self-exclusion, or anything else, our 24/7 support team is here to help.</li>
+      </ol>
+
+      <div style="margin-top:12px;">
+        <p><strong>TC Games</strong></p>
+        <p class="muted">Email: devil@tcgames.co.in</p>
+      </div>
+    </div>
+
+    <footer>
+      Copyright © 2024 TC Games - All Rights Reserved.
+      <div class="muted" style="margin-top:6px;">Rebuilt version (same layout style)</div>
+    </footer>
+
+  </div>
+
+  <div class="chat-fab" title="Chat">💬</div>
+
+  <script>
+    function toggleMore(id, btn){
+      const el = document.getElementById(id);
+      if(!el) return;
+
+      const isHidden = (el.style.display === "none" || el.style.display === "");
+      el.style.display = isHidden ? "block" : "none";
+      btn.textContent = isHidden ? "Show Less" : "Show More";
+    }
+  </script>
+
+</body>
+</html>
