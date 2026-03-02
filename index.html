@@ -3,8 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>TC Games</title>
   <meta name="description" content="Enter a World of Adventure in TC Games. Register now and join our official channel for updates, predictions and more." />
+
+  <!-- SEO: Canonical + Robots -->
+  <link rel="canonical" href="https://tcgames.co.in/" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+  <!-- Open Graph (for social share preview) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tcgames.co.in/" />
+  <meta property="og:title" content="TC Games" />
+  <meta property="og:description" content="Enter a World of Adventure in TC Games. Register now and join our official channel for updates, predictions and more." />
+  <meta property="og:image" content="https://tcgames.co.in/assets/banner.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TC Games" />
+  <meta name="twitter:description" content="Enter a World of Adventure in TC Games. Register now and join our official channel for updates, predictions and more." />
+  <meta name="twitter:image" content="https://tcgames.co.in/assets/banner.jpg" />
+
+  <!-- Performance hints -->
+  <link rel="preload" as="image" href="assets/banner.jpg" />
+  <link rel="preload" as="image" href="assets/logo.png" />
+
+  <!-- Favicon (optional but good for SERP/UX) -->
+  <link rel="icon" href="assets/logo.png" />
 
   <style>
     :root{
@@ -249,16 +274,16 @@
 <body>
 
   <div class="topbar">
-    <div class="hamburger" title="Menu">
+    <div class="hamburger" title="Menu" aria-label="Menu button" role="button" tabindex="0">
       <span>≡</span>
     </div>
-    <img class="logo" src="assets/logo.png" alt="TC Games Logo">
+    <img class="logo" src="assets/logo.png" alt="TC Games Logo" width="64" height="64">
   </div>
 
   <div class="container">
 
     <div class="banner-wrap">
-      <img class="banner" src="assets/banner.jpg" alt="Welcome to TC Games banner">
+      <img class="banner" src="assets/banner.jpg" alt="Welcome to TC Games banner" loading="eager">
     </div>
 
     <h1>Enter a World of Adventure in<br/>TC Games</h1>
@@ -269,15 +294,15 @@
     </p>
 
     <div class="cta">
-      <a class="btn" href="https://www.bg678vip8.com/#/pages/login/register?invitationCode=2801498961" target="_blank" rel="noopener">Register Here</a>
-      <a class="btn" href="https://t.me/+0zyfkKkWTXA4ODUx" target="_blank" rel="noopener">Channel Link</a>
+      <a class="btn" href="https://www.bg678vip8.com/#/pages/login/register?invitationCode=2801498961" target="_blank" rel="noopener noreferrer">Register Here</a>
+      <a class="btn" href="https://t.me/+0zyfkKkWTXA4ODUx" target="_blank" rel="noopener noreferrer">Channel Link</a>
     </div>
 
     <div class="section-title">Snapshots of Virtual Worlds</div>
 
     <div class="grid2">
       <div class="image-card">
-        <img src="assets/compete.jpg" alt="Compete with Friends">
+        <img src="assets/compete.jpg" alt="Compete with Friends" loading="lazy">
       </div>
       <div class="card">
         <h2>Compete with Friends</h2>
@@ -306,7 +331,7 @@
         </ul>
       </div>
 
-      <button class="showmore" onclick="toggleMore('more1', this)">Show More</button>
+      <button class="showmore" type="button" onclick="toggleMore('more1', this)">Show More</button>
     </div>
 
     <div class="card">
@@ -377,7 +402,7 @@
         </ul>
       </div>
 
-      <button class="showmore" onclick="toggleMore('more2', this)">Show More</button>
+      <button class="showmore" type="button" onclick="toggleMore('more2', this)">Show More</button>
     </div>
 
     <div class="card">
@@ -402,7 +427,7 @@
 
   </div>
 
-  <div class="chat-fab" title="Chat">💬</div>
+  <div class="chat-fab" title="Chat" aria-label="Chat">💬</div>
 
   <script>
     function toggleMore(id, btn){
@@ -413,6 +438,18 @@
       el.style.display = isHidden ? "block" : "none";
       btn.textContent = isHidden ? "Show Less" : "Show More";
     }
+
+    // Accessibility: allow keyboard activation for the hamburger button (no visual change)
+    (function(){
+      const hb = document.querySelector('.hamburger');
+      if(!hb) return;
+      hb.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          hb.click();
+        }
+      });
+    })();
   </script>
 
 </body>
