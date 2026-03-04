@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tcgames.co.in/sitemap.xml
