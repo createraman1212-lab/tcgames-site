@@ -1,0 +1,43 @@
+# TC Games recovery-safe SEO rules
+Options -Indexes
+RewriteEngine On
+
+# Direct crawler files - never route these to HTML pages
+RewriteRule ^sitemap\.xml$ - [L]
+RewriteRule ^robots\.txt$ - [L]
+AddType application/xml .xml
+AddType text/plain .txt
+
+# Strip old GoDaddy/Systeme blog query parameters from clean pages
+RewriteCond %{QUERY_STRING} (^|&)blogcategory= [NC]
+RewriteRule ^(.*)$ /$1? [R=301,L]
+
+# Old duplicate home URL
+RewriteRule ^home/?$ / [R=301,L]
+
+# Remove index.html from visible URLs
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# Root HTML copies from backup -> original /f/ blog URLs
+RewriteRule ^color-prediction-apps-scam-or-legit-how-to-spot-fake-platforms\.html$ /f/color-prediction-apps-scam-or-legit-how-to-spot-fake-platforms/ [R=301,L]
+RewriteRule ^color-prediction-tricks-2025--win-in-v3-game-other-color-games\.html$ /f/color-prediction-tricks-2025--win-in-v3-game-other-color-games/ [R=301,L]
+RewriteRule ^first-deposit-bonus\.html$ /f/first-deposit-bonus/ [R=301,L]
+RewriteRule ^how-to-win-or-not-lose-at-color-prediction-games-a-no-nonsense\.html$ /f/how-to-win-or-not-lose-at-color-prediction-games-a-no-nonsense/ [R=301,L]
+RewriteRule ^jalwa-game-2025-download-jalwa-game-app-register-start-earn\.html$ /f/jalwa-game-2025-download-jalwa-game-app-register-start-earn/ [R=301,L]
+RewriteRule ^jalwa-game-login-registration-full-gameplay-guide\.html$ /f/jalwa-game-login-registration-full-gameplay-guide/ [R=301,L]
+RewriteRule ^tc-game--the-most-trusted-color-prediction-game-platform\.html$ /f/tc-game--the-most-trusted-color-prediction-game-platform/ [R=301,L]
+RewriteRule ^tc-game-is-now-jalwa-game-complete-updated-guide-2025\.html$ /f/tc-game-is-now-jalwa-game-complete-updated-guide-2025/ [R=301,L]
+RewriteRule ^the-ultimate-guide-to-v3-games-your-path-to-color-prediction-fun\.html$ /f/the-ultimate-guide-to-v3-games-your-path-to-color-prediction-fun/ [R=301,L]
+
+# Off-topic / old broken URLs from GSC coverage exports
+RewriteRule ^f/mastering-local-seo-for-small-businesses/?$ / [R=301,L]
+RewriteRule ^f/.*tc-game-your-ultimate-guide-to-the-most-engaging/?$ /f/tc-game--the-most-trusted-color-prediction-game-platform/ [R=301,L]
+RewriteRule ^f/.*tc-games.*simple-color-prediction-platform/?$ /f/tc-game--the-most-trusted-color-prediction-game-platform/ [R=301,L]
+RewriteRule ^v3-game-kya-hai-v3-game-lottery-download-earning-pure-sach-2025/?$ /f/the-ultimate-guide-to-v3-games-your-path-to-color-prediction-fun/ [R=301,L]
+Redirect gone /cdn-cgi/l/email-protection
+
+# Keep real files and folders accessible
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
