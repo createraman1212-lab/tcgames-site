@@ -1,0 +1,22 @@
+# Canonical trailing-slash redirects
+/index.html / 301
+/tc-game-login /tc-game-login/ 301
+/tc-game-register /tc-game-register/ 301
+/tc-game-app-download /tc-game-app-download/ 301
+/tc-game-bonus /tc-game-bonus/ 301
+/tc-game-invite-code /tc-game-invite-code/ 301
+/tc-game-deposit-withdraw /tc-game-deposit-withdraw/ 301
+/tc-game-not-working /tc-game-not-working/ 301
+/about-us /about-us/ 301
+/contact-us /contact-us/ 301
+/privacy-policy /privacy-policy/ 301
+/terms-and-conditions /terms-and-conditions/ 301
+/disclaimer /disclaimer/ 301
+
+# Relevant old URLs consolidated to the closest replacement
+/f/first-deposit-bonus /tc-game-bonus/ 301
+/f/first-deposit-bonus/ /tc-game-bonus/ 301
+/f/tc-game-online-–-a-fun-color-prediction-platform / 301
+/f/tc-game-online-–-a-fun-color-prediction-platform/ / 301
+/f/tc-game--the-most-trusted-color-prediction-game-platform / 301
+/f/tc-game--the-most-trusted-color-prediction-game-platform/ / 301
