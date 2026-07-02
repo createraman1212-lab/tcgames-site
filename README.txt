@@ -34,3 +34,4 @@ FINAL CONTENT AUDIT
 - Repeated generic supporting-page paragraphs were rewritten into page-specific copy.
 - Shared navigation/footer labels and necessary legal concepts remain consistent by design.
 - Titles, descriptions, H1s, canonicals, schema, internal links, CTA attributes and CSP hashes were revalidated.
+Deployment refresh: 03 July 2026
