@@ -1,0 +1,30 @@
+/*
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; form-action 'none'; script-src 'self' 'sha256-19FEgp8GbI//DrOrPxbeBFRNvAvPoXBzTOCGpmsM3NE==' 'sha256-4ZWZCtdgrCxH3j/dzwvA3lNkfyA2gpyC5gAu/wtXjH0==' 'sha256-4wnvXdlcry4uTBiQsT39aQIdHPDvaqzm3Dne+xcmvQY==' 'sha256-91YboH8lC57aPdvxCFTxS/RBx6U6N01Ycif54/ltwEM==' 'sha256-BtYqJ1pxKWfFe0ZwAGNd3SRvbWhaNXcXvbPYDbOY6Nw==' 'sha256-Bwu2Z7jOaJILKCG5JCWYx7ooVn8sWJ36HKhuNQPJSMs==' 'sha256-Db7Huxsg5BXmSLjJy2tXS3Bw2aim6L/H0NhgvBnj1MM==' 'sha256-DvFUH4dY5xUrm+1NMFTCdzC/xq5Rr4Ams/ldVQZSYlk==' 'sha256-KzVO9OxcBQYJnTviWYM+Cq6DAKsmRTfQRqCR2aMnpD4==' 'sha256-PDFG6pfU5gu4kM1ZJWh8Cj/B7Fn3J31++M+z/Agm6BM==' 'sha256-VVVYQeZT/JCRCjxQL9VjnP4jvWDB22ZEZMgWUSZq2hs==' 'sha256-XEbFYmBXVtRHb/bQIoWRPZ0sIqLHU3gonfhbH9L143I==' 'sha256-YAlHcHxqrnqWYdxr/LevkftSwvsfP1Jn7EZlywMhf+U==' 'sha256-YbmfJ1tQvusawzUKqUvxiyVewsq6ZDlcMng3s9T0hLg==' 'sha256-dpgHpLLc6/olrGELRJTPVP5QJWFXyx5nmvcB3CfK0xM==' 'sha256-jw/yYtE0P+6iDNf70qd/OCuNjHVroqwBFlQ8YOm+eKw==' 'sha256-l7omIpwlurqJbqOfdiVPBavRKMrNWTMRf0Izc/gUfHk==' 'sha256-lhapUdSnr+nclQ8m389sUWdTMY5etqjpjZD8RwuZvrA==' 'sha256-n4/pY/DztUkvpeGnOxeCqm8aWklXM1ud3p/6MpJ+Rzk==' 'sha256-rO0n1ZFrCKr0b/cD+H5tgRobVypkdS57sd832/c37Cw==' 'sha256-ttSw6JaPhf0aky81uK+v6T5UCTz+1BTI63mvgPoa0qs==' 'sha256-xJwmUgi7/qK0ijyjpTjo/gJHZVOAdvmWxZOoA0YtmVg==' 'sha256-y88wMUDOfWJLHL+gyu+CZE/I2BThBLhheH+IXWARPJ0=='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; manifest-src 'self'; upgrade-insecure-requests
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Permissions-Policy: accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+/assets/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/assets/images/*
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/site.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600, must-revalidate
